@@ -19,6 +19,12 @@ class DVD extends SoportePelicula{
         this.idiomas = idiomas;
         this.listaPeliculas = listaPeliculas;
     }
+    public void calcularCostoAlq(){
+        this.precioAlq += this.precioAlq * 0.1;
+    }
+    public String toString() {
+        return "DVD{" + "idiomas=" + idiomas + ", listaPeliculas=" + listaPeliculas + '}';
+    }
 }
 class VHS extends SoportePelicula{
     public String idioma;
@@ -27,6 +33,9 @@ class VHS extends SoportePelicula{
         super(precioAlq);
         this.idioma = idioma;
         this.pelicula = pelicula;
+    }
+    public String toString() {
+        return "VHS{" + "idioma=" + idioma + ", pelicula=" + pelicula + '}';
     }
 }
 class Pelicula{
