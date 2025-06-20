@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 public class Problema1_Libro {
-    
+    public static void main(String[] args) {
+        Pelicula pelicula1 = new Pelicula("Stich", "Diego", 2025);
+        Pelicula pelicula2 = new Pelicula("La monja", "Marcelo", 2024);
+        VHS vhs1 = new VHS("EN", pelicula1, 10);
+        System.out.println(vhs1);
+    }
 }
 class SoportePelicula{
     public double precioAlq;
@@ -35,7 +40,7 @@ class VHS extends SoportePelicula{
         this.pelicula = pelicula;
     }
     public String toString() {
-        return "VHS{" + "idioma=" + idioma + ", pelicula=" + pelicula + '}';
+        return "VHS{" + "idioma=" + idioma + ", pelicula=" + pelicula + '}' + super.toString();
     }
 }
 class Pelicula{
